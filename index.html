@@ -1,12 +1,141 @@
-<!DOCTYPE html>
-<html>
+<!HTML>
 
 <head>
-<title>WEBSITE</title>
 </head>
 
-<body>
-<h1>WERKT</h1>
-</body>
 
-</html>
+<body>
+
+<img id="spr" width="160" height="160" src="spr.png">
+
+<canvas id="canv" width="800" height="800" style="border:1px solid #d3d3d3;">
+Word niet ondersteund door deze browser.</canvas>
+
+<script type="text/javascript">
+document.getElementById("spr").style.visibility = "hidden"; 
+    // on key press
+    var sel = 0;
+    redraw();
+    
+    
+    document.onkeypress = function(evt) {
+        evt = evt || window.event;
+        var charCode = evt.keyCode || evt.which;
+        var charStr = String.fromCharCode(charCode);
+        //alert(charStr);
+        
+        switch (charStr) {
+        
+            // WASD
+            case "w": // up
+                up();
+                redraw();
+                break;
+                
+            case "a": // left
+                left();
+                redraw();
+                break;
+                
+            case "s": // down
+                down();
+                redraw();
+                break;
+                
+            case "d": // right
+                right();
+                redraw();
+                break;
+                
+            
+            // Arrow keys
+            case "&": // up
+                up();
+                redraw();
+                break;
+                
+            case "%": // left
+                left();
+                redraw();
+                break;
+                
+            case "(": // down
+                down();
+                redraw();
+                break;
+                
+            case "'": // right
+                right();
+                redraw();
+                break;
+        }
+    }
+    
+    function redraw(){
+        // Draw rectangles
+
+        var canvas = document.getElementById("canv");
+        var canvdraw = canvas.getContext("2d");
+
+        for (var i=0; i<25; i++) {
+
+            var xpos = (i % 5)*160;
+            var ypos = Math.floor(i / 5)*160;
+
+            // place
+            if (i === sel) {
+                canvdraw.beginPath();
+                canvdraw.lineWidth="5";
+                canvdraw.strokeStyle="darkgray";
+                //canvdraw.fillStyle="gray";
+				var img=document.getElementById("spr");
+				canvdraw.drawImage(img,xpos,ypos,160,160);
+                //canvdraw.fillRect(xpos, ypos, 160, 160);
+                //canvdraw.rect(xpos, ypos, 160, 160);
+                canvdraw.stroke();
+            } else {
+                canvdraw.beginPath();
+                canvdraw.lineWidth="5";
+                canvdraw.strokeStyle="black";
+                canvdraw.fillStyle="white";
+                canvdraw.fillRect(xpos, ypos, 160, 160);
+                canvdraw.rect(xpos, ypos, 160, 160);
+                canvdraw.stroke();
+            }
+        }
+    }
+    
+    
+    function up() {
+        if (sel > 4) {
+            sel -= 5;
+        }
+    }
+    
+    function left() {
+        if (sel > 0) {
+            if (sel % 5 > 0) {
+                sel -= 1;
+            }
+        }
+    }
+    
+    function down() {
+        if (sel < 20) {
+            sel += 5;
+        }
+    }
+    
+    function right() {
+        if (sel < 24) {
+            if (sel % 5 < 4) {
+                sel += 1;
+            }
+        }
+    }
+    
+    
+    
+</script>
+
+</body>
