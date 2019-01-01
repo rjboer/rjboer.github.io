@@ -10,7 +10,7 @@
         "secondaryColor": "#ff3366",
         "successColor": "#F7ED4A",
         "infoColor": "#82786E",
-        "warningColor": "#879A9F",
+        "warningColor": "#4f4943",
         "dangerColor": "#B1A374",
         "mainFont": "Rubik",
         "display1Font": "Rubik",
@@ -26,12 +26,13 @@
         "isRoundedButtons": true,
         "isAnimatedOnScroll": false,
         "isScrollToTopButton": false
-      }
+      },
+      "additionalSetColors": []
     },
     "path": "@PROJECT_PATH@",
     "siteFonts": [],
     "versionFirst": "4.7.6",
-    "uniqCompNum": 4,
+    "uniqCompNum": 10,
     "versionPublish": "4.8.10"
   },
   "pages": {
@@ -59,13 +60,117 @@
             }
           },
           "_name": "header2",
-          "_customHTML": "<section group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n         'mbr-fullscreen': fullScreen,\n         'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" checked>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/jumbotron.jpg\" parallax selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#073B4C\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#767676\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container align-center\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    Carbid Team Lhee</h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Beautiful mobile websites\n                </h3>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Hier komt nog wat</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-secondary\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\">LEARN MORE</a></div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_customHTML": "<section group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n         'mbr-fullscreen': fullScreen,\n         'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" checked>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/capture-2000x1277-70-2000x1277.png\" parallax selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#073B4C\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#767676\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container align-center\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    Carbid Team Lhee</h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Beautiful mobile websites\n                </h3>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Hier komt nog wat</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-warning\" href=\"page1.html\" data-app-placeholder=\"Type Text\">Sponsors</a> <a class=\"btn btn-md btn-warning\" href=\"page2.html\" data-app-placeholder=\"Type Text\">Wij</a></div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
           "_cid": "qTkA127IK8",
           "_anchor": "header2-1",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676",
+              "font-weight": "300",
+              "text-align": "center"
+            },
+            ".number-wrap": {
+              "color": "@labelsColor",
+              "border-color": "rgba(255, 255, 255, 0.15)",
+              "position": "relative",
+              "display": "inline-block",
+              "text-align": "center",
+              "padding": "5px 10px 13px 10px",
+              "margin": "0",
+              "min-width": "118px",
+              "border-radius": "2px",
+              "max-width": "100%"
+            },
+            ".number": {
+              "font-style": "normal",
+              "font-weight": "700",
+              "font-size": "55px",
+              "text-transform": "none",
+              "letter-spacing": "-2px",
+              "word-spacing": "0",
+              "line-height": "1.3",
+              "color": "@numbersColor"
+            },
+            ".period": {
+              "display": "block",
+              "padding-top": "2px",
+              "border-top": "1px solid rgba(0, 0, 0, 0.1)"
+            },
+            ".dot": {
+              "position": "absolute",
+              "top": "-10px",
+              "right": "-1em",
+              "width": "1em",
+              "display": "block",
+              "height": "83%",
+              "overflow": "hidden",
+              "font-style": "normal",
+              "font-weight": "700",
+              "font-size": "55px",
+              "line-height": "89.65px",
+              "text-transform": "none",
+              "letter-spacing": "0",
+              "word-spacing": "0",
+              "color": "@numbersColor"
+            },
+            ".countdown-cont": {
+              "max-width": "700px",
+              "margin": "0 auto"
+            },
+            "@media (max-width: 768px)": {
+              ".dot": {
+                "display": "none"
+              }
+            },
+            "@media (max-width: 543px)": {
+              ".number-wrap": {
+                "margin-bottom": "15px"
+              }
+            },
+            "@media (max-width: 550px)": {
+              ".col-xs-3": {
+                "padding-left": "0",
+                "padding-right": "0",
+                "max-width": "25%",
+                "flex": "0 0 25%"
+              },
+              ".number-wrap": {
+                "min-width": "auto"
+              }
+            },
+            "@media (max-width: 440px)": {
+              ".number, .dot": {
+                "font-size": "40px"
+              }
+            },
+            "@media (max-width: 380px)": {
+              ".period": {
+                "font-size": "0.8rem"
+              }
+            }
+          },
+          "_name": "countdown1",
+          "_customHTML": "<section class=\"countdown1\" group=\"Countdowns\" plugins=\"countdown\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"text\" title=\"Countdown\" name=\"countdown\" value=\"2020/01/01\">\n        <input type=\"text\" inline title=\"Days\" name=\"daysCountdown\" value=\"Days\">\n        <input type=\"text\" inline title=\"Hours\" name=\"hoursCountdown\" value=\"Hours\">\n        <input type=\"text\" inline title=\"Minutes\" name=\"minutesCountdown\" value=\"Minutes\">\n        <input type=\"text\" inline title=\"Seconds\" name=\"secondsCountdown\" value=\"Seconds\">\n        <input type=\"color\" title=\"Numbers Color\" name=\"numbersColor\" value=\"#28262b\">\n        <input type=\"color\" title=\"Labels Color\" name=\"labelsColor\" value=\"#565656\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container \">\n        <h2 class=\"mbr-section-title pb-3 align-center mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n            Countdown\n        </h2>\n        <h3 class=\"mbr-section-subtitle align-center mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">Het schiet niet echt op&nbsp;</h3>\n        \n    </div>\n    <div class=\"container countdown-cont align-center\">\n        <div title=\"{{daysCountdown}}\" class=\"daysCountdown\"></div>\n        <div title=\"{{hoursCountdown}}\" class=\"hoursCountdown\"></div> \n        <div title=\"{{minutesCountdown}}\" class=\"minutesCountdown\"></div> \n        <div title=\"{{secondsCountdown}}\" class=\"secondsCountdown\"></div>\n        <div class=\"countdown pt-5 mt-2\" data-due-date=\"{{countdown}}\"> \n        </div>\n    </div>\n</section>",
+          "_cid": "rdVLE1LQzb",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "countdown1-4"
         },
         {
           "_styles": {
@@ -97,6 +202,223 @@
           "_once": false,
           "_params": {},
           "_anchor": "header9-3"
+        }
+      ]
+    },
+    "page1.html": {
+      "settings": {
+        "meta_descr": "Web Page Generator Description",
+        "title": "De mensen",
+        "order": 1
+      },
+      "components": []
+    },
+    "page2.html": {
+      "settings": {
+        "meta_descr": "Web Site Maker Description",
+        "title": "Sponsors",
+        "order": 2
+      },
+      "components": [
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            }
+          },
+          "_name": "content4",
+          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">Wij zijn carbid team Lhee</h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                    Hieronder een aantal korte feiten</h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.co\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.co\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rdVMXMFwMz",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content4-8"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".counter-container": {
+              "color": "#767676",
+              "ul": {
+                "margin-bottom": "0",
+                "li": {
+                  "margin-bottom": "1rem",
+                  "& when (@stylizedCounters)": {
+                    "list-style": "none",
+                    "&:before": {
+                      "position": "absolute",
+                      "left": "0px",
+                      "margin-top": "-10px",
+                      "padding-top": "3px",
+                      "content": "''",
+                      "display": "inline-block",
+                      "text-align": "center",
+                      "margin": "5px 10px",
+                      "line-height": "20px",
+                      "transition": "all .2s",
+                      "color": "contrast(@counterColor)",
+                      "background": "@counterColor",
+                      "width": "25px",
+                      "height": "25px",
+                      "border-radius": "50%",
+                      "& when (@countersType = 'circle')": {
+                        "background": "none",
+                        "border": "1px solid @counterColor",
+                        "color": "@counterColor"
+                      },
+                      "& when (@countersType = 'square')": {
+                        "border-radius": "0"
+                      },
+                      "& when (@mark)": {
+                        "content": "'✓'"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "_name": "content12",
+          "_customHTML": "<section class=\"mbr-section article content12\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Stylized Counters\" name=\"stylizedCounters\" checked>\n        <input type=\"color\" title=\"Counter Color\" name=\"counterColor\" value=\"#149dcc\" condition=\"stylizedCounters\">\n        <input type=\"checkbox\" title=\"Stylized Counters\" name=\"stylizedCounters\" checked>\n        <input type=\"checkbox\" title=\"Mark\" name=\"mark\" checked condition=\"stylizedCounters\">\n        <select title=\"Counters Type\" name=\"countersType\" condition=\"stylizedCounters\">\n            <option value=\"default\" selected>Сircle Fill</option>\n            <option value=\"circle\">Circle</option>\n            <option value=\"square\">Square</option>\n        </select>   \n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text counter-container col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>\n                <ul>\n                    <li>In 2000 begonnen met carbid schieten,&nbsp;</li><li>De grootste bus is X liter</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rdVMQBceuo",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content12-6"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676",
+              "text-align": "center",
+              "font-weight": "300"
+            },
+            ".timeline-text-content": {
+              "padding": "2rem 2.5rem",
+              "background": "@timelineColor",
+              "margin-left": "2rem",
+              "p": {
+                "margin-bottom": "0"
+              }
+            },
+            ".time-line-date-content": {
+              "margin-right": "2rem",
+              "p": {
+                "padding": "2rem 2.5rem",
+                "background": "@timelineColor",
+                "float": "right"
+              }
+            },
+            ".timeline-element": {
+              "margin-bottom": "50px",
+              "position": "relative",
+              "word-wrap": "break-word",
+              "word-break": "break-word",
+              "display": "-webkit-flex",
+              "flex-direction": "row",
+              "-webkit-flex-direction": "row",
+              "&:hover": {
+                ".mbr-timeline-date": {
+                  "box-shadow": "0 7px 20px 0px rgba(0, 0, 0, 0.08)",
+                  "transition": "all .4s"
+                },
+                ".timeline-text-content": {
+                  "box-shadow": "0 7px 20px 0px rgba(0, 0, 0, 0.08)",
+                  "transition": "all .4s"
+                }
+              }
+            },
+            ".mbr-timeline-date, .timeline-text-content": {
+              "transition": "all .4s"
+            },
+            ".reverse": {
+              "flex-direction": "row-reverse",
+              "-webkit-flex-direction": "row-reverse",
+              ".timeline-text-content": {
+                "margin-right": "2rem",
+                "margin-left": "0"
+              },
+              ".time-line-date-content": {
+                "margin-left": "2rem",
+                "margin-right": "0rem",
+                "p": {
+                  "float": "left"
+                }
+              }
+            },
+            ".iconBackground": {
+              "position": "absolute",
+              "left": "50%",
+              "width": "20px",
+              "height": "20px",
+              "line-height": "30px",
+              "text-align": "center",
+              "border-radius": "50%",
+              "font-size": "30px",
+              "display": "inline-block",
+              "background-color": "@timelineColor",
+              "top": "20px",
+              "margin-left": "-10px"
+            },
+            ".separline:before": {
+              "top": "20px",
+              "bottom": "0",
+              "position": "absolute",
+              "content": "\"\"",
+              "width": "2px",
+              "background-color": "@timelineColor",
+              "left": "calc(50% ~\"-\" 1px)",
+              "height": "calc(100% ~\"+\" 4rem)"
+            },
+            "@media (max-width: 768px)": {
+              ".iconBackground": {
+                "left": "0 !important"
+              },
+              ".separline:before": {
+                "left": "0!important"
+              },
+              ".timeline-text-content": {
+                "margin-left": "0 !important"
+              },
+              ".time-line-date-content": {
+                "margin-right": "0 !important",
+                "p": {
+                  "float": "left !important"
+                }
+              },
+              ".reverse": {
+                ".time-line-date-content": {
+                  "margin-left": "0 !important"
+                },
+                ".timeline-text-content": {
+                  "margin-right": "0 !important"
+                }
+              }
+            }
+          },
+          "_name": "timeline1",
+          "_customHTML": "<section class=\"timeline1\" group=\"Timelines\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel)-->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        \n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Dates\" name=\"showDates\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        \n        <input type=\"color\" title=\"Timelines Color\" name=\"timelineColor\" value=\"#ffffff\">\n        <select title=\"Timelines count\" name=\"timelinesAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\" selected>5</option>\n            <option value=\"6\">6</option>\n            <option value=\"7\">7</option>\n            <option value=\"8\">8</option>\n            <option value=\"9\">9</option>\n            <option value=\"10\">10</option>\n            <option value=\"11\">11</option>\n            <option value=\"12\">12</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/img/03.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#f8f8f8\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#cccccc\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container align-center\">\n        <h2 class=\"mbr-section-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n            Timeline\n        </h2>\n        <h3 class=\"mbr-section-subtitle pb-5 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit\n        </h3>\n\n        <div class=\"container timelines-container\" mbri-timelines>\n            <div class=\"row timeline-element reverse\" mbr-class=\"{'separline':timelinesAmount>1}\">      \n                 <div class=\"timeline-date-panel col-xs-12 col-md-6  align-left\">         \n                    <div class=\"time-line-date-content\">\n                        <p class=\"mbr-timeline-date mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            2000</p>\n                    </div>\n                </div>\n           <span class=\"iconBackground\"></span>\n            <div class=\"col-xs-12 col-md-6 align-right\">\n                <div class=\"timeline-text-content\">\n                    <h4 class=\"mbr-timeline-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                        Begonnen&nbsp;</h4>\n                    <p class=\"mbr-timeline-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-timeline-text\">\n                        In 2000 begonnen we met carbid schieten, gewoon braafjes met een verf blikje</p>\n                 </div>\n            </div>\n            </div>\n\n            <div class=\"row timeline-element \" mbr-if=\"timelinesAmount>1\" mbr-class=\"{'separline':timelinesAmount>2}\">\n                <div class=\"timeline-date-panel col-xs-12 col-md-6 align-right\">\n                    <div class=\"time-line-date-content\">\n                        <p class=\"mbr-timeline-date mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">2002</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-xs-12 col-md-6 align-left \">\n                    <div class=\"timeline-text-content\">\n                        <h4 class=\"mbr-timeline-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            De buurjongens komen erbij</h4>\n                        <p class=\"mbr-timeline-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-timeline-text\">Inmiddels overgestapt op melkbussen</p>\n                    </div>\n                </div>\n            </div> \n\n\n            <div class=\"row timeline-element reverse\" mbr-if=\"timelinesAmount>2\" mbr-class=\"{'separline':timelinesAmount>3}\">\n                <div class=\"timeline-date-panel col-xs-12 col-md-6  align-left\">\n                    <div class=\"time-line-date-content\">\n                        <p class=\"mbr-timeline-date mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">2004</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-xs-12 col-md-6 align-right\">\n                    <div class=\"timeline-text-content\">\n                        <h4 class=\"mbr-timeline-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">De expansie</h4>      \n                        <p class=\"mbr-timeline-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-timeline-text\">\n                            We maken grotere bussen, vergassers, regelen een tent en barbeque voor de buurt. Verder doen we mee aan de autorace die vanaf 2014 georganiseerd wordt.&nbsp;</p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"row timeline-element \" mbr-if=\"timelinesAmount>3\" mbr-class=\"{'separline':timelinesAmount>4}\">\n                <div class=\"timeline-date-panel col-xs-12 col-md-6 align-right\">\n                    <div class=\"time-line-date-content\">\n                        <p class=\"mbr-timeline-date mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            2016</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-xs-12 col-md-6 align-left \">\n                    <div class=\"timeline-text-content\">\n                        <h4 class=\"mbr-timeline-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            Ludieke acties + jongere garde</h4>\n                        <p class=\"mbr-timeline-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-timeline-text\">We doen een aantal ludieke acties en aangezien we er zelf ook niet jonger op worden. Zijn we op zoek gegaan naar mensen die ook mee willen doen.</p>\n                    </div>\n                </div>\n            </div>\n\n\n            <div class=\"row timeline-element reverse\" mbr-if=\"timelinesAmount>4\" mbr-class=\"{'separline':timelinesAmount>5}\">\n                <div class=\"timeline-date-panel col-xs-12 col-md-6  align-left\">\n                    <div class=\"time-line-date-content\">\n                        <p class=\"mbr-timeline-date mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">2019</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-xs-12 col-md-6 align-right\">\n                    <div class=\"timeline-text-content\">\n                        <h4 class=\"mbr-timeline-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">De Groep nu</h4>\n                        <p class=\"mbr-timeline-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-timeline-text\">\n                            We bestaan uit een actief bestuur van 7 man,<br>Inclusief mensen die meehelpen ~ 20 mensen</p>\n                    </div>\n                </div>\n            </div>\n\n\n            <div class=\"row timeline-element\" mbr-if=\"timelinesAmount>5\" mbr-class=\"{'separline':timelinesAmount>6}\">\n                <div class=\"timeline-date-panel col-xs-12 col-md-6 align-right\">\n                    <div class=\"time-line-date-content\">\n                       <p class=\"mbr-timeline-date mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            6 june 2023\n                        </p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-xs-12 col-md-6 align-left \">\n                    <div class=\"timeline-text-content\">\n                        <h4 class=\"mbr-timeline-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            Multi Homepages\n                        </h4>\n                        <p class=\"mbr-timeline-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-timeline-text\">\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat libero, bibendum in libero tempor, luctus volutpat ligula. Integer fringilla porttitor pretium. Nam erat felis, iaculis id justo ut, ullamcorper feugiat elit. Proin vel lectus auctor, porttitor ligula vitae, convallis leo. In eget massa elit.\n                        </p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"row timeline-element reverse\" mbr-if=\"timelinesAmount>6\" mbr-class=\"{'separline':timelinesAmount>7}\">\n                <div class=\"timeline-date-panel col-xs-12 col-md-6  align-left\">\n                    <div class=\"time-line-date-content\">\n                        <p class=\"mbr-timeline-date mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                           7 july 2024\n                        </p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-xs-12 col-md-6 align-right\">\n                    <div class=\"timeline-text-content\">\n                        <h4 class=\"mbr-timeline-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            Responsive Design\n                        </h4>\n                        <p class=\"mbr-timeline-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-timeline-text\">\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat libero, bibendum in libero tempor, luctus volutpat ligula. Integer fringilla porttitor pretium. Nam erat felis, iaculis id justo ut, ullamcorper feugiat elit. Proin vel lectus auctor, porttitor ligula vitae, convallis leo. In eget massa elit.\n                        </p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"row timeline-element\" mbr-if=\"timelinesAmount>7\" mbr-class=\"{'separline':timelinesAmount>8}\">\n                <div class=\"timeline-date-panel col-xs-12 col-md-6 align-right\">\n                    <div class=\"time-line-date-content\">\n                        <p class=\"mbr-timeline-date mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                           8 august 2025  \n                        </p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-xs-12 col-md-6 align-left \">\n                    <div class=\"timeline-text-content\">\n                        <h4 class=\"mbr-timeline-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            Smart Watch\n                        </h4>\n                        <p class=\"mbr-timeline-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-timeline-text\">\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat libero, bibendum in libero tempor, luctus volutpat ligula. Integer fringilla porttitor pretium. Nam erat felis, iaculis id justo ut, ullamcorper feugiat elit. Proin vel lectus auctor, porttitor ligula vitae, convallis leo. In eget massa elit.\n                        </p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"row timeline-element reverse\" mbr-if=\"timelinesAmount>8\" mbr-class=\"{'separline':timelinesAmount>9}\">\n                <div class=\"timeline-date-panel col-xs-12 col-md-6  align-left\">\n                    <div class=\"time-line-date-content\">\n                        <p class=\"mbr-timeline-date mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                           9 september 2026\n                        </p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-xs-12 col-md-6 align-right\">\n                    <div class=\"timeline-text-content\">\n                        <h4 class=\"mbr-timeline-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            Design out of the box\n                        </h4>\n\n                        <p class=\"mbr-timeline-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-timeline-text\">\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat libero, bibendum in libero tempor, luctus volutpat ligula. Integer fringilla porttitor pretium. Nam erat felis, iaculis id justo ut, ullamcorper feugiat elit. Proin vel lectus auctor, porttitor ligula vitae, convallis leo. In eget massa elit.\n                        </p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"row timeline-element\" mbr-if=\"timelinesAmount>9\" mbr-class=\"{'separline':timelinesAmount>10}\">\n                <div class=\"timeline-date-panel col-xs-12 col-md-6 align-right\">\n                    <div class=\"time-line-date-content\">\n                       <p class=\"mbr-timeline-date mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                          10 october 2027\n                        </p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-xs-12 col-md-6 align-left \">\n                    <div class=\"timeline-text-content\">\n                        <h4 class=\"mbr-timeline-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            Awesome Reports\n                        </h4> \n                        <p class=\"mbr-timeline-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-timeline-text\">\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat libero, bibendum in libero tempor, luctus volutpat ligula. Integer fringilla porttitor pretium. Nam erat felis, iaculis id justo ut, ullamcorper feugiat elit. Proin vel lectus auctor, porttitor ligula vitae, convallis leo. In eget massa elit.\n                        </p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"row timeline-element reverse\" mbr-if=\"timelinesAmount>10\" mbr-class=\"{'separline':timelinesAmount>11}\">\n                <div class=\"timeline-date-panel col-xs-12 col-md-6  align-left\">\n                    <div class=\"time-line-date-content\">\n                       <p class=\"mbr-timeline-date mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                          11 november 2028\n                        </p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-xs-12 col-md-6 align-right\">\n                    <div class=\"timeline-text-content\">\n                        <h4 class=\"mbr-timeline-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            Design out of the box\n                        </h4>\n                        <p class=\"mbr-timeline-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-timeline-text\">\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat libero, bibendum in libero tempor, luctus volutpat ligula. Integer fringilla porttitor pretium. Nam erat felis, iaculis id justo ut, ullamcorper feugiat elit. Proin vel lectus auctor, porttitor ligula vitae, convallis leo. In eget massa elit.\n                        </p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"row timeline-element\" mbr-if=\"timelinesAmount>11\">\n                <div class=\"timeline-date-panel col-xs-12 col-md-6 align-right\">\n                    <div class=\"time-line-date-content\">\n                        <p class=\"mbr-timeline-date mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                           12 december 2029\n                        </p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-xs-12 col-md-6 align-left \">\n                    <div class=\"timeline-text-content\">\n                        <h4 class=\"mbr-timeline-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            Awesome Reports\n                        </h4>\n                        <p class=\"mbr-timeline-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-timeline-text\">\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat libero, bibendum in libero tempor, luctus volutpat ligula. Integer fringilla porttitor pretium. Nam erat felis, iaculis id justo ut, ullamcorper feugiat elit. Proin vel lectus auctor, porttitor ligula vitae, convallis leo. In eget massa elit.\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rdVNMNrCIF",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "timeline1-9"
         }
       ]
     }
